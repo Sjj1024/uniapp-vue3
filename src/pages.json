@@ -1,0 +1,47 @@
+{
+    "pages": [
+        {
+            "path": "pages/home/index",
+            "style": {
+                "navigationBarTitleText": "首页"
+            }
+        },
+        {
+            "path": "pages/my/index",
+            "style": {
+                "navigationBarTitleText": "我的"
+            }
+        }
+    ],
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#3c9cff",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "iconPath": "static/images/home-2-line.png",
+                "selectedIconPath": "static/images/home-2-fill.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "iconPath": "static/images/user-line.png",
+                "selectedIconPath": "static/images/user-fill.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "easycom": {
+        "custom": {
+            "^u-(.*)": "uview-plus/components/u-$1/u-$1.vue"
+        }
+    }
+}
