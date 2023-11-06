@@ -21,4 +21,4 @@ yarn
 
 # 预览图片
 
-[](https://img-blog.csdnimg.cn/5a1ab6c34abe4a718e514ac73776d049.png)
+![](https://img-blog.csdnimg.cn/5a1ab6c34abe4a718e514ac73776d049.png)
