@@ -1,5 +1,5 @@
 <template>
-  <u-tabbar :value="user.tabIndex" @change="change" :fixed="true" :placeholder="true" :safeAreaInsetBottom="true">
+  <u-tabbar :value="tabIndex" @change="change" :fixed="true" :placeholder="true" :safeAreaInsetBottom="true">
     <u-tabbar-item text="首页" icon="home"></u-tabbar-item>
     <view class="tabars" @click="tabMiddle">
       <view class="item">
@@ -11,17 +11,23 @@
 </template>
 
 <script setup lang="ts">
-import useUserStore from "../../store/user"
-// 父子组件传值: 函数
-const props = defineProps<{
-  tabClick: Function
-}>()
+import { ref } from 'vue';
 
-const user = useUserStore();
+
+const tabIndex = ref(0);
 
 const change = function (index) {
-  user.setTabIndex(index)
-  props.tabClick(index)
+  tabIndex.value = index
+  console.log("调用父组件的tab切换", index);
+  if (index == 0) {
+    uni.switchTab({
+      url: '/pages/home/index'
+    })
+  } else if (index == 1) {
+    uni.switchTab({
+      url: '/pages/my/index'
+    })
+  }
 };
 
 // 点击中间凸出来的tab
