@@ -2,6 +2,7 @@ import { createSSRApp } from 'vue'
 import App from './App.vue'
 import uviewPlus from 'uview-plus'
 import { createPinia } from 'pinia'
+// import "@/static/echarts.min.js"
 
 const Pinia = createPinia()
 
