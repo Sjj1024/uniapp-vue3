@@ -130,6 +130,11 @@ onMounted(() => {
     chart.setOption(state.option);
   });
 })
+
+// 渲染完成
+const init = () => {
+  console.log("渲染完成");
+}
 </script>
 
 <style scopedlang='scss' scoped>
