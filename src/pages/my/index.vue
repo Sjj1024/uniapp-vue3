@@ -9,6 +9,7 @@
 
 <script setup lang="ts">
 import LEchart from '@/components/l-echart/l-echart.vue'
+// lime-echart是一个demo的组件，用于测试组件
 // import LEchart from '@/components/lime-echart/lime-echart.vue'
 import { onMounted, reactive, ref } from "vue"
 // nvue 不需要引入
@@ -23,7 +24,8 @@ import * as echarts from 'echarts';
 // #endif
 // #endif
 
-let chart = ref() as any; // 获取dom
+
+let chart = ref<Element>(); // 获取dom
 const state = reactive({
   option: {},
 })
