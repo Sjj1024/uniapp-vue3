@@ -41,6 +41,7 @@ const info = reactive({
 
 const test = function () {
   console.log("pinia中的数据:", user.teststr);
+  // if (user.teststr) {
 };
 
 const setStore = function () {
