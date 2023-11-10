@@ -1,13 +1,13 @@
 <template>
   <view>
-    <view class="title">我的首页-空白页面</view>
+    <view class="title">我的主页</view>
     <view>
-      <LEchart ref="chart" @finished="init"></LEchart>
+      <LEchart class="echart" ref="chart" @finished="init"></LEchart>
     </view>
   </view>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import LEchart from '@/components/l-echart/l-echart.vue'
 // lime-echart是一个demo的组件，用于测试组件
 // import LEchart from '@/components/lime-echart/lime-echart.vue'
@@ -25,7 +25,7 @@ import * as echarts from 'echarts';
 // #endif
 
 
-let chart = ref<Element>(); // 获取dom
+let chart = ref(); // 获取dom
 const state = reactive({
   option: {},
 })
@@ -138,6 +138,11 @@ const init = () => {
 </script>
 
 <style scopedlang='scss' scoped>
+.echart {
+  width: 100%;
+  height: 300px;
+}
+
 .title {
   text-align: center;
 }
