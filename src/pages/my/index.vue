@@ -7,7 +7,6 @@
 
 <script setup lang='ts'>
 import Bars from '@/components/tabbar/index.vue';
-
 </script>
 
 <style scopedlang='scss' scoped>

@@ -1,5 +1,5 @@
 <template>
-  <u-tabbar :value="tabIndex" @change="change" :fixed="true" :placeholder="true" :safeAreaInsetBottom="true">
+  <u-tabbar :value="user.tabIndex" @change="change" :fixed="true" :placeholder="true" :safeAreaInsetBottom="true">
     <u-tabbar-item text="首页" icon="home"></u-tabbar-item>
     <view class="tabars" @click="tabMiddle">
       <view class="item">
@@ -11,13 +11,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+// import { ref } from 'vue';
+import useUserStore from "@/store/user";
 
+// 使用vuex来存储全局的tab索引,不然每次切换tab，首页和别的页面不会同步
+const user = useUserStore();
 
-const tabIndex = ref(0);
 
 const change = function (index) {
-  tabIndex.value = index
+  user.setTabIndex(index)
   console.log("调用父组件的tab切换", index);
   if (index == 0) {
     uni.switchTab({
