@@ -7,6 +7,12 @@
             }
         },
         {
+            "path": "pages/middle/index",
+            "style": {
+                "navigationBarTitleText": "中间"
+            }
+        },
+        {
             "path": "pages/my/index",
             "style": {
                 "navigationBarTitleText": "我的"
@@ -24,6 +30,12 @@
                 "iconPath": "static/images/home-2-line.png",
                 "selectedIconPath": "static/images/home-2-fill.png",
                 "text": "首页"
+            },
+            {
+                "pagePath": "pages/middle/index",
+                "iconPath": "static/images/home-2-line.png",
+                "selectedIconPath": "static/images/home-2-fill.png",
+                "text": "中间"
             },
             {
                 "pagePath": "pages/my/index",

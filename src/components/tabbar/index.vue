@@ -35,6 +35,11 @@ const change = function (index) {
 // 点击中间凸出来的tab
 const tabMiddle = function () {
   console.log("点击中间的tab");
+  user.setTabIndex(99)
+  //在起始页面跳转到test.vue页面并传递参数
+  uni.switchTab({
+    url: '/pages/middle/index'
+  })
 }
 
 
