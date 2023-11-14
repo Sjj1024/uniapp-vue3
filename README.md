@@ -19,7 +19,7 @@
 
 ## 手机 APP 显示
 
-在手机 app 上显示的效果：
+在安卓手机模拟器上显示的效果，如果想要IOS苹果的效果，需要mac电脑调试，所以这里就不展示了
 ![](https://img-blog.csdnimg.cn/e1b07b6a67e741fa977b6dbe56f98a23.png)
 
 # 拉取代码
