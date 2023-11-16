@@ -6,10 +6,12 @@
     </u-button>
     <u-button @click="setStore">修改</u-button>
   </view>
+  <TabBar></TabBar>
 </template>
 
 <script setup lang="ts">
 import useUserStore from "@/store/user";
+import TabBar from "@/components/tabbar/index.vue"
 
 const user = useUserStore();
 

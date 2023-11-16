@@ -5,12 +5,13 @@
       <LEchart class="echart" ref="chart" @finished="init"></LEchart>
     </view>
   </view>
+  <TabBar></TabBar>
 </template>
 
 <script setup>
 import LEchart from '@/components/l-echart/l-echart.vue'
-// lime-echart是一个demo的组件，用于测试组件
-// import LEchart from '@/components/lime-echart/lime-echart.vue'
+import TabBar from "@/components/tabbar/index.vue"
+
 import { onMounted, reactive, ref } from "vue"
 // nvue 不需要引入
 // #ifdef VUE3
