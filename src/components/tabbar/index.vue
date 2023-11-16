@@ -1,11 +1,13 @@
 <template>
   <u-tabbar :value="user.tabIndex" @change="change" :fixed="true" :placeholder="true" :safeAreaInsetBottom="true">
     <u-tabbar-item text="首页" icon="home"></u-tabbar-item>
+    <u-tabbar-item text="预约查询" icon="map"></u-tabbar-item>
     <view class="tabars" @click="tabMiddle">
       <view class="item">
         <image class="img" src="../../static/images/gongshang.png" mode="widthFix"></image>
       </view>
     </view>
+    <u-tabbar-item text="Arena" icon="integral"></u-tabbar-item>
     <u-tabbar-item text="我的" icon="account"></u-tabbar-item>
   </u-tabbar>
 </template>
@@ -24,6 +26,14 @@ const change = function (index) {
       url: '/pages/home/index'
     })
   } else if (index == 1) {
+    uni.switchTab({
+      url: '/pages/arena/index'
+    })
+  } else if (index == 2) {
+    uni.switchTab({
+      url: '/pages/arena/index'
+    })
+  } else if (index == 3) {
     uni.switchTab({
       url: '/pages/my/index'
     })
