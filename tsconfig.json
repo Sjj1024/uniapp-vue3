@@ -7,6 +7,7 @@
         "noImplicitAny": false,
         "allowJs": true,
         "strict": true,
+        "outDir": "dist",
         "jsx": "preserve",
         "sourceMap": true,
         "baseUrl": "./",
@@ -18,5 +19,6 @@
         "esModuleInterop": true,
         "lib": ["esnext", "dom"]
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+    "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.tsx", "src/**/*.vue"],
+    "exclude": ["node_modules", "dist"]
 }

@@ -7,6 +7,12 @@
             }
         },
         {
+            "path": "pages/selCity/index",
+            "style": {
+                "navigationBarTitleText": "选择城市"
+            }
+        },
+        {
             "path": "pages/arena/index",
             "style": {
                 "navigationBarTitleText": "竞技场"
