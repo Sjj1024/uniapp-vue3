@@ -50,6 +50,7 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3061720230111001",
     "pinia": "^2.0.27",
     "uview-plus": "^3.1.19",
+    "vant": "^4.8.7",
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"
   },

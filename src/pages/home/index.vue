@@ -1,58 +1,70 @@
 <template>
-  <view>
-    <view class="vue-box">{{ user.teststr }}</view>
-    <u-button type="primary" @click="test" :color="$u.color.primary">
-      测试
-    </u-button>
-    <u-button @click="setStore">修改</u-button>
-    <!-- 图片组件 -->
-    <u-image :showLoading="true" :src="demoImg" width="80px" height="80px">
-    </u-image>
-    <!-- 文本组件 -->
-    <u-text type="primary" text="主色"></u-text>
-    <u-text type="error" text="错误"></u-text>
-    <u-text type="success" text="成功"></u-text>
-    <u-text type="warning" text="警告"></u-text>
-    <u-text type="info" text="信息"></u-text>
-    <u-badge type="warning" max="9" value="5"></u-badge>
-    <u-tag text="标签"></u-tag>
-    <u-tag text="标签" type="warning"></u-tag>
-    <u-tag text="标签" type="success"></u-tag>
-    <u-tag text="标签" type="error"></u-tag>
-    <u-loading-icon text="加载中" textSize="18"></u-loading-icon>
-    <u-rate count="5" v-model="info.rate"></u-rate>
-    <u-search placeholder="日照香炉生紫烟" v-model="info.keyword"></u-search>
-    <u-slider v-model="info.slider"></u-slider>
-  </view>
+    <view class="homeBox">
+        <view class="vue-box">{{ user.teststr }}</view>
+        <van-button type="primary" @click="test"> 测试 </van-button>
+        <van-button @click="setStore">修改</van-button>
+        <!-- 图片组件 -->
+        <van-image
+            :showLoading="true"
+            :src="demoImg"
+            width="80px"
+            height="80px"
+        >
+        </van-image>
+        <!-- 文本组件 -->
+        <van-text type="primary" text="主色"></van-text>
+        <van-text type="error" text="错误"></van-text>
+        <van-text type="success" text="成功"></van-text>
+        <van-text type="warning" text="警告"></van-text>
+        <van-text type="info" text="信息"></van-text>
+        <van-badge type="warning" max="9" value="5"></van-badge>
+        <van-tag text="标签"></van-tag>
+        <van-tag text="标签" type="warning"></van-tag>
+        <van-tag text="标签" type="success"></van-tag>
+        <van-tag text="标签" type="error"></van-tag>
+        <van-loading-icon text="加载中" textSize="18"></van-loading-icon>
+        <van-rate count="5" v-model="info.rate"></van-rate>
+        <van-search
+            placeholder="日照香炉生紫烟"
+            v-model="info.keyword"
+        ></van-search>
+        <van-slider v-model="info.slider"></van-slider>
+    </view>
 </template>
 
 <script setup lang="ts">
-import useUserStore from "@/store/user";
-import demoImg from "@/static/green.jpeg"
-import { reactive } from "vue";
+import useUserStore from '@/store/user'
+import demoImg from '@/static/green.jpeg'
+import { reactive } from 'vue'
 
-const user = useUserStore();
+const user = useUserStore()
 
 const info = reactive({
-  rate: 0,
-  keyword: "",
-  slider: 0
+    rate: 0,
+    keyword: '',
+    slider: 0,
 })
 
 const test = function () {
-  console.log("pinia中的数据:", user.teststr);
-  // if (user.teststr) {
-};
+    console.log('pinia中的数据:', user.teststr)
+    // if (user.teststr) {
+}
 
 const setStore = function () {
-  const randomnum = Math.random() * 100 + ""
-  user.setStr(randomnum);
-};
+    const randomnum = Math.random() * 100 + ''
+    user.setStr(randomnum)
+}
 </script>
 
 <style lang="scss" scoped>
+.homeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+}
 .vue-box {
-  text-align: center;
-  margin: 10px 0;
+    text-align: center;
+    margin: 10px 0;
 }
 </style>
