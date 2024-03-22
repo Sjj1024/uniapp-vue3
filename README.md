@@ -1,4 +1,4 @@
-# uniapp+uviewPlus+vue3+ts+pinia+vite 开发基础模板
+# uniapp+uviewPlus+vue3+ts+pinia+echarts+vite 开发基础模板
 
 使用 uniapp + vue3 + ts + pinia + vite + echarts 开发的基础模板，支持小程序，手机 APP，拿来即可使用，不要删除 yarn.lock 文件，否则会启动报错，这个可能和 pinia 的版本有关，所以不要随意修改。安卓模拟器推荐使用 mumu 模拟器，然后不会配置的可以看我的文章教程：<http://t.csdnimg.cn/sGjLM>
 
