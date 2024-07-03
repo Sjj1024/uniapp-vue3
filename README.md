@@ -4,8 +4,9 @@
 
 ## main 分支
 
-使用 uniapp + vue3 + ts + pinia + vite 开发基础模板，没有特殊的功能，只是集成了开发环境，开箱即用。  
-效果图：![](https://img-blog.csdnimg.cn/492c7069ba5045c69017f668045af320.png)
+使用 uniapp + vue3 + ts + pinia + vite 开发基础模板，没有特殊的功能，只是集成了开发环境，开箱即用。
+效果图：  
+![](https://img-blog.csdnimg.cn/492c7069ba5045c69017f668045af320.png)
 
 ## custom-bar 分支
 
