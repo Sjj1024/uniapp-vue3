@@ -10,21 +10,22 @@
 
 ## custom-bar 分支
 
-在 main 分支的基础上，集成了自定义 tabbar 的效果，有凸出 bar 的效果，可以流畅使用。  
+在 custom-bar 分支的基础上，集成了自定义 tabbar 的效果，有凸出 bar 的效果，可以流畅使用。  
 效果图：![](https://img-blog.csdnimg.cn/0c08188da57d4a139b898b21cf720152.png)
 
 ## vue3-echart 分支
 
-在 main 分支的基础上，集成了 echarts，可以快速使用 echarts。开箱即用，非常方便。  
+在 vue3-echart 分支的基础上，集成了 echarts，可以快速使用 echarts。开箱即用，非常方便。  
 效果图：![](https://img-blog.csdnimg.cn/a2a689bb13ca45c8b6f1bc96d83b86b2.png)
 
 ## vue3-vant 分支
-在main的基础上，集成了vant框架，特别适合移动端开发的UI框架。
-vant官网地址：https://github.com/youzan/vant
+
+在 vue3-vant 的基础上，集成了 vant 框架，特别适合移动端开发的 UI 框架。
+vant 官网地址：https://github.com/youzan/vant
 
 ## 手机 APP 显示
 
-在安卓手机模拟器上显示的效果，如果想要IOS苹果的效果，需要mac电脑调试，所以这里就不展示了
+在安卓手机模拟器上显示的效果，如果想要 IOS 苹果的效果，需要 mac 电脑调试，所以这里就不展示了
 ![](https://img-blog.csdnimg.cn/e1b07b6a67e741fa977b6dbe56f98a23.png)
 
 # 拉取代码
