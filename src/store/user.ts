@@ -1,16 +1,21 @@
 import { defineStore } from 'pinia'
 
-const useUserStore = defineStore('login', {
-    state() {
-        return {
-            teststr: '测试数据',
-        }
-    },
+export default defineStore('user', {
+    state: () => ({
+        // 用户信息
+        userInfo: {
+            coins: 1000,
+            gems: 50,
+            ownedCards: {},
+            collectionRate: 0,
+        },
+    }),
     actions: {
-        setStr(newStr: string) {
-            this.teststr = newStr
+        setUserInfo(userInfo: any) {
+            this.userInfo = userInfo
         },
     },
+    getters: {
+        getUserInfo: (state) => state.userInfo,
+    },
 })
-
-export default useUserStore

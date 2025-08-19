@@ -1,58 +1,210 @@
 <template>
-  <view>
-    <view class="vue-box">{{ user.teststr }}</view>
-    <u-button type="primary" @click="test" :color="$u.color.primary">
-      测试
-    </u-button>
-    <u-button @click="setStore">修改</u-button>
-    <!-- 图片组件 -->
-    <u-image :showLoading="true" :src="demoImg" width="80px" height="80px">
-    </u-image>
-    <!-- 文本组件 -->
-    <u-text type="primary" text="主色"></u-text>
-    <u-text type="error" text="错误"></u-text>
-    <u-text type="success" text="成功"></u-text>
-    <u-text type="warning" text="警告"></u-text>
-    <u-text type="info" text="信息"></u-text>
-    <u-badge type="warning" max="9" value="5"></u-badge>
-    <u-tag text="标签"></u-tag>
-    <u-tag text="标签" type="warning"></u-tag>
-    <u-tag text="标签" type="success"></u-tag>
-    <u-tag text="标签" type="error"></u-tag>
-    <u-loading-icon text="加载中" textSize="18"></u-loading-icon>
-    <u-rate count="5" v-model="info.rate"></u-rate>
-    <u-search placeholder="日照香炉生紫烟" v-model="info.keyword"></u-search>
-    <u-slider v-model="info.slider"></u-slider>
-  </view>
+    <view class="card-list-page">
+        <view class="page-title">卡牌收藏</view>
+
+        <!-- 筛选栏 -->
+        <view class="filter-bar">
+            <view class="filter-group">
+                <text class="filter-label">稀有度:</text>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.rarity === 'all' }"
+                    @click="updateFilter({ rarity: 'all' })"
+                >
+                    全部
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.rarity === 'common' }"
+                    @click="updateFilter({ rarity: 'common' })"
+                >
+                    普通
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.rarity === 'rare' }"
+                    @click="updateFilter({ rarity: 'rare' })"
+                >
+                    稀有
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.rarity === 'epic' }"
+                    @click="updateFilter({ rarity: 'epic' })"
+                >
+                    史诗
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.rarity === 'legend' }"
+                    @click="updateFilter({ rarity: 'legend' })"
+                >
+                    传说
+                </view>
+            </view>
+
+            <view class="filter-group">
+                <text class="filter-label">属性:</text>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.attribute === 'all' }"
+                    @click="updateFilter({ attribute: 'all' })"
+                >
+                    全部
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.attribute === 'fire' }"
+                    @click="updateFilter({ attribute: 'fire' })"
+                >
+                    火焰
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.attribute === 'water' }"
+                    @click="updateFilter({ attribute: 'water' })"
+                >
+                    水
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.attribute === 'wind' }"
+                    @click="updateFilter({ attribute: 'wind' })"
+                >
+                    风
+                </view>
+                <view
+                    class="filter-item"
+                    :class="{ active: filter.attribute === 'earth' }"
+                    @click="updateFilter({ attribute: 'earth' })"
+                >
+                    大地
+                </view>
+            </view>
+        </view>
+
+        <!-- 卡牌列表 -->
+        <view class="cards-container">
+            <card-item
+                v-for="card in filteredCards"
+                :key="card.id"
+                :card="card"
+                @click="navigateToDetail(card.id)"
+            />
+        </view>
+
+        <!-- 空状态 -->
+        <view class="empty-state" v-if="filteredCards.length === 0">
+            <image src="/static/images/empty.png" mode="widthFix"></image>
+            <text>没有找到符合条件的卡牌</text>
+        </view>
+    </view>
 </template>
 
-<script setup lang="ts">
-import useUserStore from "@/store/user";
-import demoImg from "@/static/green.jpeg"
-import { reactive } from "vue";
+<script setup>
+import { onMounted } from 'vue'
+import useCardsStore from '@/store/card'
+import { useRouter } from 'vue-router'
+import CardItem from '@/components/card.vue'
 
-const user = useUserStore();
+const cardsStore = useCardsStore()
+const router = useRouter()
 
-const info = reactive({
-  rate: 0,
-  keyword: "",
-  slider: 0
+const { filter, filteredCards } = cardsStore
+
+onMounted(() => {
+    if (cardsStore.allCards.length === 0) {
+        cardsStore.initCards()
+    }
 })
 
-const test = function () {
-  console.log("pinia中的数据:", user.teststr);
-  // if (user.teststr) {
-};
+const updateFilter = (filters) => {
+    cardsStore.updateFilter(filters)
+}
 
-const setStore = function () {
-  const randomnum = Math.random() * 100 + ""
-  user.setStr(randomnum);
-};
+const navigateToDetail = (cardId) => {
+    cardsStore.setCurrentCard(cardId)
+    router.push('/pages/detailCard/index')
+}
 </script>
 
-<style lang="scss" scoped>
-.vue-box {
-  text-align: center;
-  margin: 10px 0;
+<style scoped>
+.card-list-page {
+    padding-bottom: 60rpx;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 36rpx;
+    font-weight: bold;
+    padding: 30rpx 20rpx;
+    color: #333;
+}
+
+.filter-bar {
+    background-color: #fff;
+    padding: 20rpx;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20rpx;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15rpx;
+    flex-wrap: wrap;
+}
+
+.filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.filter-label {
+    font-size: 28rpx;
+    color: #666;
+    margin-right: 20rpx;
+    width: 100rpx;
+    display: inline-block;
+}
+
+.filter-item {
+    padding: 8rpx 20rpx;
+    background-color: #f0f2f5;
+    border-radius: 20rpx;
+    margin-right: 15rpx;
+    margin-bottom: 15rpx;
+    font-size: 26rpx;
+    cursor: pointer;
+}
+
+.filter-item.active {
+    background-color: #3c78d8;
+    color: #fff;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20rpx;
+    gap: 20rpx;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200rpx;
+}
+
+.empty-state image {
+    width: 200rpx;
+    margin-bottom: 30rpx;
+}
+
+.empty-state text {
+    color: #999;
+    font-size: 28rpx;
 }
 </style>
