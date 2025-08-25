@@ -3,7 +3,8 @@
         {
             "path": "pages/home/index",
             "style": {
-                "navigationBarTitleText": "首页"
+                "navigationStyle": "custom",
+                "navigationBarTextStyle": "black"
             }
         },
         {
@@ -42,8 +43,8 @@
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "uni-app",
-        "navigationBarBackgroundColor": "#F8F8F8",
-        "backgroundColor": "#F8F8F8"
+        "navigationBarBackgroundColor": "#fff",
+        "backgroundColor": "#fff"
     },
     "easycom": {
         "custom": {

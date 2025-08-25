@@ -6,18 +6,18 @@
                 class="card-image"
                 mode="aspectFill"
             ></image>
-            <view class="rarity-badge" :class="card.rarity">
+            <!-- <view class="rarity-badge" :class="card.rarity">
                 {{ getRarityText(card.rarity) }}
-            </view>
+            </view> -->
         </view>
-        <view class="card-info">
+        <!-- <view class="card-info">
             <text class="card-name">{{ card.name }}</text>
             <view class="card-attribute">
                 <text :class="card.attribute">{{
                     getAttributeText(card.attribute)
                 }}</text>
             </view>
-        </view>
+        </view> -->
     </view>
 </template>
 
@@ -57,7 +57,7 @@ const getAttributeText = (attribute) => {
 
 <style scoped>
 .card-item {
-    width: 31%;
+    width: 220rpx;
     background-color: #fff;
     border-radius: 16rpx;
     overflow: hidden;
@@ -71,7 +71,7 @@ const getAttributeText = (attribute) => {
 
 .card-image-container {
     position: relative;
-    height: 320rpx;
+    height: 280rpx;
     overflow: hidden;
 }
 
