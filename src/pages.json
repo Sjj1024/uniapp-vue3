@@ -20,6 +20,12 @@
             }
         },
         {
+            "path": "pages/car/index",
+            "style": {
+                "navigationBarTitleText": "盒柜"
+            }
+        },
+        {
             "path": "pages/xrdemo/index",
             "style": {
                 "navigationBarTitleText": "xrdemo",
@@ -40,6 +46,12 @@
                 "iconPath": "static/images/home-2-line.png",
                 "selectedIconPath": "static/images/home-2-fill.png",
                 "text": "首页"
+            },
+            {
+                "pagePath": "pages/car/index",
+                "iconPath": "static/images/compass-line.png",
+                "selectedIconPath": "static/images/compass-fill.png",
+                "text": "盒柜"
             },
             {
                 "pagePath": "pages/my/index",
