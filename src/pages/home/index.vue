@@ -15,7 +15,7 @@
                 ></u-icon>
             </view> -->
             <!-- 搜索 -->
-            <view class="search-input">
+            <view class="search-input" @click="navigateToXrDemo">
                 <view class="search-icon">
                     <u-icon name="search" size="40rpx" color="#b4b4b4"></u-icon>
                 </view>
@@ -54,6 +54,12 @@ onMounted(() => {
     console.log('onMounted')
     // uni.hideTabBar()
 })
+
+const navigateToXrDemo = () => {
+    uni.navigateTo({
+        url: '/pages/xrdemo/index',
+    })
+}
 
 const { filter, filteredCards } = cardsStore
 

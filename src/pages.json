@@ -18,6 +18,15 @@
             "style": {
                 "navigationBarTitleText": "详情"
             }
+        },
+        {
+            "path": "pages/xrdemo/index",
+            "style": {
+                "navigationBarTitleText": "xrdemo",
+                "usingComponents": {
+                    "xr-start": "../../wxcomponents/xr-start"
+                }
+            }
         }
     ],
     "tabBar": {
