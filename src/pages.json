@@ -33,6 +33,12 @@
                     "xr-start": "../../wxcomponents/xr-start"
                 }
             }
+        },
+        {
+            "path": "pages/signin/index",
+            "style": {
+                "navigationBarTitleText": "签到"
+            }
         }
     ],
     "tabBar": {

@@ -21,6 +21,7 @@
                 class="feature-item"
                 v-for="(item, index) in features"
                 :key="index"
+                @click="handleFeatureClick(item.name)"
             >
                 <image
                     :src="item.icon"
@@ -147,6 +148,37 @@ const toDetailCard = (product) => {
     uni.navigateTo({
         url: `/pages/detailCard/index`,
     })
+}
+
+// 处理功能入口点击
+const handleFeatureClick = (featureName: string) => {
+    switch (featureName) {
+        case '每日签到':
+            uni.navigateTo({
+                url: '/pages/signin/index'
+            })
+            break
+        case '领券中心':
+            uni.showToast({
+                title: '功能开发中',
+                icon: 'none'
+            })
+            break
+        case '消费奖励':
+            uni.showToast({
+                title: '功能开发中',
+                icon: 'none'
+            })
+            break
+        case '银票好物':
+            uni.showToast({
+                title: '功能开发中',
+                icon: 'none'
+            })
+            break
+        default:
+            break
+    }
 }
 </script>
 
