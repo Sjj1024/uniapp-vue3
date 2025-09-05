@@ -37,7 +37,7 @@
         {
             "path": "pages/signin/index",
             "style": {
-                "navigationBarTitleText": "签到"
+                "navigationBarTitleText": ""
             }
         }
     ],
@@ -49,20 +49,20 @@
         "list": [
             {
                 "pagePath": "pages/home/index",
-                "iconPath": "static/images/home-2-line.png",
-                "selectedIconPath": "static/images/home-2-fill.png",
+                "iconPath": "static/imgs/home-2-line.png",
+                "selectedIconPath": "static/imgs/home-2-fill.png",
                 "text": "首页"
             },
             {
                 "pagePath": "pages/car/index",
-                "iconPath": "static/images/compass-line.png",
-                "selectedIconPath": "static/images/compass-fill.png",
+                "iconPath": "static/imgs/compass-line.png",
+                "selectedIconPath": "static/imgs/compass-fill.png",
                 "text": "盒柜"
             },
             {
                 "pagePath": "pages/my/index",
-                "iconPath": "static/images/user-line.png",
-                "selectedIconPath": "static/images/user-fill.png",
+                "iconPath": "static/imgs/user-line.png",
+                "selectedIconPath": "static/imgs/user-fill.png",
                 "text": "我的"
             }
         ]
