@@ -8,7 +8,7 @@
         <!-- 温馨提示横幅 -->
         <view class="banner">
             <image
-                src="http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-11/5e91f982-abd9-49bc-d61e-ef01b623f79f.jpeg"
+                src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home1.jpeg"
                 class="banner-image"
                 mode="widthFix"
                 alt="卡通形象提示图"
@@ -110,37 +110,37 @@ const products = [
         tag: '一番赏',
         name: '海洋的回音测试',
         price: '31.98',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-08-10/3f25c6af-aae0-49f2-c07d-4e87521d96a8.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
     },
     {
         tag: '一番赏',
         name: '骑上我心爱的小摩托 - 副本 - 副本',
         price: '28.88',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-08-10/3f25c6af-aae0-49f2-c07d-4e87521d96a8.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
     },
     {
         tag: '一番赏',
         name: '一起八卦呀 - 副本',
         price: '13.88',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-08-10/3f25c6af-aae0-49f2-c07d-4e87521d96a8.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
     },
     {
         tag: '一番赏',
         name: '寻找果冻兔 - 副本',
         price: '22.88',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-08-10/3f25c6af-aae0-49f2-c07d-4e87521d96a8.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
     },
     {
         tag: '一番赏',
         name: '小火龙来啦 - 副本',
         price: '25.88',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-08-10/3f25c6af-aae0-49f2-c07d-4e87521d96a8.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
     },
     {
         tag: '一番赏',
         name: 'rico 50%',
         price: '15.00',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-08-10/3f25c6af-aae0-49f2-c07d-4e87521d96a8.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
     },
 ]
 
