@@ -10,7 +10,7 @@
         <view class="product-info">
             <view class="product-header">
                 <image
-                    src="http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg"
+                    src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg"
                     class="product-image"
                     mode="widthFix"
                     alt="海洋的回音商品图"
@@ -145,63 +145,63 @@ const activeTab = ref(0)
 const bxPrizes = [
     {
         name: '海洋之子',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '0.428%',
         remaining: '3/3',
         price: '31.90',
     },
     {
         name: '快乐星球',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '0.571%',
         remaining: '4/4',
         price: '31.98',
     },
     {
         name: '折纸独角兽',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '0.714%',
         remaining: '5/5',
         price: '31.98',
     },
     {
         name: '木偶',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '0.428%',
         remaining: '3/3',
         price: '31.98',
     },
     {
         name: '真相',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '0.714%',
         remaining: '5/5',
         price: '31.98',
     },
     {
         name: '回音',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '1.142%',
         remaining: '8/8',
         price: '31.98',
     },
     {
         name: '天使小熊',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '1.428%',
         remaining: '10/10',
         price: '31.98',
     },
     {
         name: '招财纳福',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '1.428%',
         remaining: '10/10',
         price: '31.98',
     },
     {
         name: '爱吃零食',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '1.714%',
         remaining: '12/12',
         price: '26.88',
@@ -212,21 +212,21 @@ const bxPrizes = [
 const hPrizes = [
     {
         name: '玉米萌粒',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '31.428%',
         remaining: '220/220',
         price: '31.98',
     },
     {
         name: '面包萌粒',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '30.285%',
         remaining: '212/212',
         price: '31.98',
     },
     {
         name: '鲷鱼烧萌粒',
-        image: 'http://www.yqmh.cuicanchaowan.com/uploads/box/2025-07-27/fc57908c-23c1-3b02-3dd4-82b415ffccc1.jpeg',
+        image: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
         rate: '29.714%',
         remaining: '208/208',
         price: '31.98',
