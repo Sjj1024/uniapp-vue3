@@ -3,8 +3,7 @@
         {
             "path": "pages/home/index",
             "style": {
-                "navigationStyle": "custom",
-                "navigationBarTextStyle": "black"
+                "navigationBarTitleText": "首页"
             }
         },
         {

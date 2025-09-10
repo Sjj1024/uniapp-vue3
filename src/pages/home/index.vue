@@ -1,10 +1,5 @@
 <template>
     <view class="container">
-        <!-- 顶部导航栏 -->
-        <view class="navbar">
-            <text class="navbar-title">元气抽盒机</text>
-        </view>
-
         <!-- 温馨提示横幅 -->
         <view class="banner">
             <image

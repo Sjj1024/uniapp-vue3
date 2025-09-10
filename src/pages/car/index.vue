@@ -101,26 +101,6 @@
                 <view class="empty-text">暂无数据</view>
             </view>
         </view>
-
-        <!-- 底部操作栏 -->
-        <view class="bottom-bar">
-            <view class="select-all">
-                <checkbox :checked="isAllSelected" @change="handleSelectAll" />
-                <text class="select-text">全选</text>
-                <text class="invert-select" @click="handleInvertSelect"
-                    >| 反选</text
-                >
-                <text class="selected-count"
-                    >选中数量: {{ selectedItems.length }}</text
-                >
-            </view>
-            <view class="operation-buttons">
-                <button class="btn decompose" @click="handleDecompose">
-                    分解
-                </button>
-                <button class="btn pickup" @click="handlePickup">提货</button>
-            </view>
-        </view>
     </view>
 </template>
 
