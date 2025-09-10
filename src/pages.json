@@ -25,15 +25,6 @@
             }
         },
         {
-            "path": "pages/xrdemo/index",
-            "style": {
-                "navigationBarTitleText": "xrdemo",
-                "usingComponents": {
-                    "xr-start": "../../wxcomponents/xr-start"
-                }
-            }
-        },
-        {
             "path": "pages/signin/index",
             "style": {
                 "navigationBarTitleText": ""
