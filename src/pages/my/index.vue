@@ -7,10 +7,6 @@
                     <text>登录/注册</text>
                 </view>
             </view>
-
-            <view class="settings-btn" @click="goSettings">
-                <text class="iconfont">&#xe608;</text>
-            </view>
         </view>
 
         <!-- 资产数据区 -->

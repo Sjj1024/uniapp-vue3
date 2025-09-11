@@ -299,7 +299,7 @@ const handleFeatureClick = (featureName: string) => {
 .products {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 10px 0;
     gap: 10px;
     background-color: #fff;
     margin: 0 10px 60px 10px;
