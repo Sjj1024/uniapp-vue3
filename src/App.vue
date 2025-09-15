@@ -2,6 +2,7 @@
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
 onLaunch(() => {
     console.log('App Launch')
+    uni.hideTabBar()
     // 获取顶部状态栏高度
     uni.getSystemInfo({
         success: (result: any) => {
@@ -53,6 +54,8 @@ onLaunch(() => {
 })
 onShow(() => {
     console.log('App Show')
+    // 隐藏默认导航栏
+    uni.hideTabBar()
 })
 onHide(() => {
     console.log('App Hide')

@@ -39,10 +39,11 @@
             </view>
         </view>
     </view>
+    <TabBar />
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import TabBar from '@/components/tabar.vue'
 
 // 资产数据
 const assets = [

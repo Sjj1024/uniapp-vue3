@@ -54,6 +54,8 @@
     /* 小程序特有相关 */
     "mp-weixin": {
         "appid": "wx0e3911de23d8859e",
+        "lazyCodeLoading": "requiredComponents",
+        "rendererOptions": { "skyline": { "defaultContentBox": true } },
         "setting": {
             "urlCheck": false
         },

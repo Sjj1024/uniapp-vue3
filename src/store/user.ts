@@ -9,6 +9,7 @@ export default defineStore('user', {
             ownedCards: {},
             collectionRate: 0,
         },
+        tabIndex: 0,
     }),
     actions: {
         setUserInfo(userInfo: any) {

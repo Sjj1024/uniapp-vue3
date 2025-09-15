@@ -1,6 +1,7 @@
 <template>
-    <view class="container">
-        <!-- 顶部导航栏 -->
+    <TopBar title="详情" />
+    <Loading v-if="isLoading" />
+    <view v-else class="container" :style="{ paddingTop: contentTop }">
         <!-- 标题区 -->
         <view class="title-section">
             <text class="main-title">YIFANSHANG</text>
@@ -130,13 +131,18 @@
 
         <!-- 底部购买按钮 -->
         <view class="buy-section">
-            <button class="buy-btn">立即排队</button>
+            <button class="buy-btn">立即抽卡</button>
         </view>
     </view>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import TopBar from '@/components/topbar.vue'
+import Loading from '@/components/loading.vue'
+import { ref, onMounted } from 'vue'
+import { contentTop } from '@/utils/comm'
+
+const isLoading = ref(true)
 
 // 标签切换状态
 const activeTab = ref(0)
@@ -261,6 +267,13 @@ const winningRecords = [
         time: '昨天 19:56',
     },
 ]
+
+onMounted(() => {
+    setTimeout(() => {
+        console.log('isLoading', isLoading.value)
+        isLoading.value = false
+    }, 3000)
+})
 </script>
 
 <style scoped>
@@ -270,6 +283,7 @@ const winningRecords = [
     min-height: 100vh;
     background-color: #f0fce8;
     padding-bottom: 70px;
+    position: relative;
 }
 
 /* 顶部导航栏 */

@@ -3,7 +3,7 @@
         <!-- 温馨提示横幅 -->
         <view class="banner">
             <image
-                src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home1.jpeg"
+                src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/homebar2.jpg"
                 class="banner-image"
                 mode="widthFix"
                 alt="卡通形象提示图"
@@ -66,28 +66,30 @@
             </view>
         </view>
     </view>
+    <TabBar />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import TabBar from '@/components/tabar.vue'
 
 // 功能入口数据
 const features = [
     {
         name: '每日签到',
-        icon: 'https://img.alicdn.com/imgextra/i4/2200676927379/O1CN01udPyg924Nde2V1ZYa_!!2200676927379.png',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/ling.png',
     },
     {
         name: '领券中心',
-        icon: 'https://img.alicdn.com/imgextra/i1/2200676927379/O1CN01qdXmxv24Nde39W0ZO_!!2200676927379.png',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/nan.png',
     },
     {
         name: '消费奖励',
-        icon: 'https://img.alicdn.com/imgextra/i4/2200676927379/O1CN019SlLKy24Nde2lTsy7_!!2200676927379.png',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/yi.png',
     },
     {
         name: '银票好物',
-        icon: 'https://img.alicdn.com/imgextra/i4/2200676927379/O1CN01U2cPtq24Nde2Dtdt4_!!2200676927379.png',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/jing.png',
     },
 ]
 
@@ -142,6 +144,8 @@ const products = [
 const toDetailCard = (product) => {
     uni.navigateTo({
         url: `/pages/detailCard/index`,
+        animationType: 'fade-in',
+        animationDuration: 3000,
     })
 }
 
@@ -150,25 +154,25 @@ const handleFeatureClick = (featureName: string) => {
     switch (featureName) {
         case '每日签到':
             uni.navigateTo({
-                url: '/pages/signin/index'
+                url: '/pages/signin/index',
             })
             break
         case '领券中心':
             uni.showToast({
                 title: '功能开发中',
-                icon: 'none'
+                icon: 'none',
             })
             break
         case '消费奖励':
             uni.showToast({
                 title: '功能开发中',
-                icon: 'none'
+                icon: 'none',
             })
             break
         case '银票好物':
             uni.showToast({
                 title: '功能开发中',
-                icon: 'none'
+                icon: 'none',
             })
             break
         default:
@@ -182,17 +186,20 @@ const handleFeatureClick = (featureName: string) => {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* background-color: #f5f5f5; */
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* 顶部导航栏 */
 .navbar {
     height: 44px;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
 }
 
 .navbar-title {
@@ -245,7 +252,7 @@ const handleFeatureClick = (featureName: string) => {
     display: flex;
     justify-content: space-around;
     padding: 15px 0;
-    background-color: #fff;
+    background-color: #ffffff88;
     margin: 10px;
     border-radius: 10px;
 }
@@ -269,7 +276,7 @@ const handleFeatureClick = (featureName: string) => {
 
 /* 分类导航 */
 .category-nav {
-    background-color: #fff;
+    background-color: #ffffff88;
     padding: 10px 0;
     margin: 0 10px;
     border-radius: 10px 10px 0 0;
@@ -301,7 +308,7 @@ const handleFeatureClick = (featureName: string) => {
     flex-wrap: wrap;
     padding: 10px 0;
     gap: 10px;
-    background-color: #fff;
+    background-color: #ffffff66;
     margin: 0 10px 60px 10px;
     border-radius: 0 0 10px 10px;
 }

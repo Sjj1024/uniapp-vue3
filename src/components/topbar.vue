@@ -39,9 +39,9 @@
                     ></u-icon>
                 </view>
                 <!-- 自定义标题 -->
-                <text class="title" :style="{ color: titleColor }">{{
-                    title
-                }}</text>
+                <text class="title" :style="{ color: titleColor }">
+                    {{ title }}
+                </text>
                 <!-- 标题栏背景色 -->
                 <view
                     class="head-bg"
@@ -58,7 +58,6 @@
 </template>
 
 <script setup lang="ts">
-
 const props = defineProps({
     title: {
         type: String,
@@ -173,8 +172,8 @@ const goToHome = () => {
 
         .title {
             // color: black;
-            font-weight: bold;
-            font-size: 36rpx;
+            // font-weight: bold;
+            font-size: 32rpx;
         }
 
         .head-bg {

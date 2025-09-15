@@ -1,5 +1,6 @@
 <template>
-    <view class="container">
+    <Loading v-if="isLoading" />
+    <view v-else class="container">
         <!-- 标签切换 -->
         <view class="tabs">
             <view
@@ -102,10 +103,15 @@
             </view>
         </view>
     </view>
+    <TabBar />
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import Loading from '@/components/loading.vue'
+import { ref, computed, onMounted } from 'vue'
+import TabBar from '@/components/tabar.vue'
+
+const isLoading = ref(true)
 
 // 标签切换状态
 const activeTab = ref('spot') // 'spot' 现货柜, 'treasure' 宝箱柜
@@ -283,6 +289,12 @@ const getStatusText = (status) => {
     }
     return statusMap[status] || ''
 }
+
+onMounted(() => {
+    setTimeout(() => {
+        isLoading.value = false
+    }, 3000)
+})
 </script>
 
 <style scoped>

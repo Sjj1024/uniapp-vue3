@@ -3,7 +3,8 @@
         {
             "path": "pages/home/index",
             "style": {
-                "navigationBarTitleText": "首页"
+                "navigationBarTitleText": "首页",
+                // "navigationStyle": "custom"
             }
         },
         {
@@ -15,13 +16,20 @@
         {
             "path": "pages/detailCard/index",
             "style": {
-                "navigationBarTitleText": "详情"
+                "navigationBarTitleText": "详情",
+                "navigationStyle": "custom"
             }
         },
         {
             "path": "pages/car/index",
             "style": {
                 "navigationBarTitleText": "盒柜"
+            }
+        },
+        {
+            "path": "pages/imgcard/index",
+            "style": {
+                "navigationBarTitleText": "图鉴"
             }
         },
         {
@@ -34,34 +42,26 @@
     "tabBar": {
         "color": "#7A7E83",
         "selectedColor": "#3c9cff",
-        "borderStyle": "black",
-        "backgroundColor": "#ffffff",
         "list": [
             {
-                "pagePath": "pages/home/index",
-                "iconPath": "static/imgs/home-2-line.png",
-                "selectedIconPath": "static/imgs/home-2-fill.png",
-                "text": "首页"
+                "pagePath": "pages/home/index"
             },
             {
-                "pagePath": "pages/car/index",
-                "iconPath": "static/imgs/compass-line.png",
-                "selectedIconPath": "static/imgs/compass-fill.png",
-                "text": "盒柜"
+                "pagePath": "pages/car/index"
             },
             {
-                "pagePath": "pages/my/index",
-                "iconPath": "static/imgs/user-line.png",
-                "selectedIconPath": "static/imgs/user-fill.png",
-                "text": "我的"
+                "pagePath": "pages/imgcard/index"
+            },
+            {
+                "pagePath": "pages/my/index"
             }
         ]
     },
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "uni-app",
-        "navigationBarBackgroundColor": "#fff",
-        "backgroundColor": "#fff"
+        "navigationBarBackgroundColor": "#ffffff66",
+        "backgroundColor": "#ffffff66"
     },
     "easycom": {
         "custom": {

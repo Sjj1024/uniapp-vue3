@@ -5,3 +5,7 @@ declare module "*.vue" {
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }
+
+
+// 声明微信wx
+declare var wx: any
