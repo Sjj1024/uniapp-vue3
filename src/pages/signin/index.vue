@@ -132,7 +132,11 @@ onMounted(() => {
 <style lang="scss" scoped>
 .signin-container {
     min-height: 100vh;
-    background: linear-gradient(180deg, #ff6b9d 0%, #ff8a80 50%, #ffb74d 100%);
+    // background: linear-gradient(180deg, #ff6b9d 0%, #ff8a80 50%, #ffb74d 100%);
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/sigbg.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
 }
@@ -176,15 +180,19 @@ onMounted(() => {
 // 积分显示区域
 .points-section {
     padding: 120rpx 40rpx 40rpx;
+    background-color: #ffffff88;
+    margin: 10px 30rpx;
+    border-radius: 10px;
+    box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.1);
 
     .points-label {
-        color: #fff;
+        // color: #fff;
         font-size: 28rpx;
         margin-bottom: 10rpx;
     }
 
     .points-value {
-        color: #fff;
+        // color: #fff;
         font-size: 48rpx;
         font-weight: bold;
     }
@@ -192,7 +200,7 @@ onMounted(() => {
 
 // 主内容区域
 .main-content {
-    background: #fff;
+    background-color: #ffffffa5;
     margin: 0 30rpx;
     border-radius: 20rpx;
     padding: 40rpx;
@@ -303,8 +311,8 @@ onMounted(() => {
     }
 
     .signin-counter {
-        color: #999;
-        font-size: 24rpx;
+        color: #606060;
+        font-size: 28rpx;
     }
 }
 

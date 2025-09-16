@@ -35,7 +35,7 @@
         {
             "path": "pages/signin/index",
             "style": {
-                "navigationBarTitleText": ""
+                "navigationBarTitleText": "签到"
             }
         }
     ],

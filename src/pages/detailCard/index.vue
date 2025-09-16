@@ -82,9 +82,9 @@
                         ></image>
                         <text class="prize-name">{{ prize.name }}</text>
                         <text class="prize-rate">概率: {{ prize.rate }}</text>
-                        <text class="prize-remaining">{{
-                            prize.remaining
-                        }}</text>
+                        <text class="prize-remaining">
+                            {{ prize.remaining }}
+                        </text>
                         <text class="prize-price">¥{{ prize.price }}</text>
                     </view>
                 </view>
@@ -336,8 +336,7 @@ onMounted(() => {
     background-color: #fff;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border: 2px solid #aed581;
+    box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.1);
 }
 
 .product-header {
