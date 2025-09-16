@@ -65,19 +65,19 @@ const router = useRouter()
 const categories = ref([
     {
         name: '英雄卡',
-        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/xiangyu.png',
     },
     {
         name: '装备卡',
-        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/liubang.jpg',
     },
     {
         name: '故事卡',
-        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/luzhi.jpg',
     },
     {
         name: '纪念卡',
-        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
+        icon: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/yuji.png',
     },
 ])
 
@@ -233,7 +233,11 @@ onMounted(() => {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background: linear-gradient(135deg, #000000 0%, #a855f7 100%);
+    /* background: linear-gradient(135deg, #000000 0%, #a855f7 100%); */
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/tujianbg.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 12px 0;
     position: relative;
     overflow: hidden;

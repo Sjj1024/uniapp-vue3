@@ -11,7 +11,7 @@
         <view class="product-info">
             <view class="product-header">
                 <image
-                    src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg"
+                    src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/ka.jpg"
                     class="product-image"
                     mode="widthFix"
                     alt="海洋的回音商品图"
@@ -131,7 +131,7 @@
 
         <!-- 底部购买按钮 -->
         <view class="buy-section">
-            <button class="buy-btn">立即抽卡</button>
+            <button class="buy-btn">立即抢购</button>
         </view>
     </view>
 </template>
@@ -400,16 +400,17 @@ onMounted(() => {
 
 .prev-btn,
 .next-btn {
-    background-color: #ff6b6b;
+    background-color: #4774b3;
     color: #fff;
     width: 60px;
-    height: 40px;
+    height: 30px;
     padding: 0;
 }
 
 .change-btn {
-    background-color: #ff6b6b;
+    background-color: #4774b3;
     color: #fff;
+    height: 40px;
     padding: 2px 30px;
 }
 
@@ -449,7 +450,7 @@ onMounted(() => {
 }
 
 .tab-item.active {
-    background-color: #ff6b6b;
+    background-color: #4774b3;
     color: #fff;
 }
 
@@ -577,7 +578,7 @@ onMounted(() => {
 .buy-btn {
     width: 80%;
     padding: 6px 0;
-    background-color: #ff5722;
+    background-color: #4774b3;
     color: #fff;
     font-size: 18px;
     border-radius: 30px;

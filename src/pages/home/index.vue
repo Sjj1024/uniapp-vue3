@@ -51,9 +51,9 @@
                 :key="index"
                 @click="toDetailCard(product)"
             >
-                <view class="product-tag" v-if="product.tag">
+                <!-- <view class="product-tag" v-if="product.tag">
                     <text>{{ product.tag }}</text>
-                </view>
+                </view> -->
                 <image
                     :src="product.image"
                     class="product-image"
@@ -298,7 +298,7 @@ const handleFeatureClick = (featureName: string) => {
 }
 
 .category-item.active {
-    background-color: #ff6b6b;
+    background-color: #4774b3;
     color: #fff;
 }
 

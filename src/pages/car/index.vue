@@ -2,7 +2,7 @@
     <Loading v-if="isLoading" />
     <view v-else class="container">
         <!-- 标签切换 -->
-        <view class="tabs">
+        <!-- <view class="tabs">
             <view
                 class="tab-item"
                 :class="{ active: activeTab === 'spot' }"
@@ -17,7 +17,7 @@
             >
                 宝箱柜
             </view>
-        </view>
+        </view> -->
 
         <!-- 状态筛选 -->
         <view class="status-filter">

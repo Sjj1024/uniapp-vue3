@@ -10,15 +10,15 @@
             <view class="card-info">
                 <view class="card-name-rarity">
                     <text class="card-name">{{ card.name }}</text>
-                    <text class="card-rarity" :class="card.rarity">{{
-                        getRarityText(card.rarity)
-                    }}</text>
+                    <text class="card-rarity" :class="card.rarity">
+                        {{ getRarityText(card.rarity) }}
+                    </text>
                 </view>
                 <view class="card-attribute">
                     <text class="attribute-label">属性:</text>
-                    <text class="attribute-value" :class="card.attribute">{{
-                        getAttributeText(card.attribute)
-                    }}</text>
+                    <text class="attribute-value" :class="card.attribute">
+                        {{ getAttributeText(card.attribute) }}
+                    </text>
                 </view>
                 <view class="card-stats">
                     <view class="stat-item">

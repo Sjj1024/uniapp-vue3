@@ -26,7 +26,7 @@
                         @click="goToBack"
                         class="arrowleft"
                         name="arrow-left"
-                        color="#fff"
+                        color="#000"
                         size="20"
                     ></u-icon>
                     <text class="text_box"></text>
@@ -34,7 +34,7 @@
                         @click="goToHome"
                         class="home"
                         name="home"
-                        color="#fff"
+                        color="#000"
                         size="20"
                     ></u-icon>
                 </view>
@@ -135,10 +135,10 @@ const goToHome = () => {
         font-weight: 500;
 
         .menu_btn {
-            // background-color: #ffffff; //这个是小程序默认的标题栏背景色
+            background-color: #ffffff9d; //这个是小程序默认的标题栏背景色
             overflow: hidden;
-            background-color: #0000001f;
-            border: 0.5rpx solid #ffffff54;
+            // background-color: #0000001f;
+            border: 0.5rpx solid #8a8a8a3e;
             z-index: 999;
 
             // position: fixed;//行内式写了固定定位--目的是去掉下划页面一起滚动问题
@@ -157,6 +157,8 @@ const goToHome = () => {
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                color: #000;
+
                 transform: translate(-50%, -50%) !important;
                 -webkit-transform: translate(-50%, -50%) !important;
             }
@@ -165,6 +167,7 @@ const goToHome = () => {
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                color: #000;
                 transform: translate(60%, -50%) !important;
                 -webkit-transform: translate(60%, -50%) !important;
             }

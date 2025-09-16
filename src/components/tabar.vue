@@ -41,7 +41,7 @@
             <view class="item">
                 <image
                     class="img"
-                    src="https://carrier-mljr-test.oss-cn-beijing.aliyuncs.com/hado_static/statics/code3x.png"
+                    src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/camera.png"
                     mode="widthFix"
                 ></image>
             </view>
@@ -139,6 +139,7 @@ onMounted(() => {
     background-color: #fff;
     // border-top: 3rpx solid #dadbde;
     padding: 20rpx;
+    // box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.1);
 
     .item {
         width: 100%;
