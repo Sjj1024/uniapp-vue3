@@ -90,67 +90,66 @@ const allCards = ref([
     {
         id: 1,
         name: '烈焰战士',
-        imageUrl: 'https://picsum.photos/seed/hero1/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
     {
         id: 2,
         name: '寒冰法师',
-        imageUrl: 'https://picsum.photos/seed/hero2/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 3,
         name: '暗影刺客',
-        imageUrl: 'https://picsum.photos/seed/hero3/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
     {
         id: 4,
         name: '光明圣骑士',
-        imageUrl: 'https://picsum.photos/seed/hero4/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 5,
         name: '狼人守护者',
-        imageUrl: 'https://picsum.photos/seed/hero5/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 6,
         name: '东方武者',
-        imageUrl: 'https://picsum.photos/seed/hero6/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
     {
         id: 7,
         name: '风之行者',
-        imageUrl: 'https://picsum.photos/seed/hero7/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 8,
         name: '机械工程师',
-        imageUrl: 'https://picsum.photos/seed/hero8/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 9,
         name: '绯红剑客',
-        imageUrl: 'https://picsum.photos/seed/hero9/300/400',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
-
     // 装备卡
     {
         id: 10,
@@ -167,6 +166,34 @@ const allCards = ref([
         isRare: false,
     },
     // 更多卡牌可以在这里继续添加...
+    {
+        id: 12,
+        name: '魔法护盾',
+        imageUrl: 'https://picsum.photos/seed/equip2/300/400',
+        category: 2,
+        isRare: false,
+    },
+    {
+        id: 13,
+        name: '魔法护盾',
+        imageUrl: 'https://picsum.photos/seed/equip2/300/400',
+        category: 3,
+        isRare: false,
+    },
+    {
+        id: 14,
+        name: '魔法护盾',
+        imageUrl: 'https://picsum.photos/seed/equip2/300/400',
+        category: 3,
+        isRare: false,
+    },
+    {
+        id: 15,
+        name: '绯红剑客',
+        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        category: 3,
+        isRare: true,
+    },
 ])
 
 // 根据选中的分类过滤卡牌
