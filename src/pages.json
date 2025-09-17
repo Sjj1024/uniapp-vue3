@@ -37,6 +37,13 @@
             "style": {
                 "navigationBarTitleText": "签到"
             }
+        },
+        {
+            "path": "pages/login/index",
+            "style": {
+                "navigationBarTitleText": "登陆",
+                "navigationStyle": "custom"
+            }
         }
     ],
     "tabBar": {

@@ -70,8 +70,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import TabBar from '@/components/tabar.vue'
+import useUserStore from '@/store/user'
+
+const user = useUserStore()
 
 // 功能入口数据
 const features = [
@@ -179,6 +182,11 @@ const handleFeatureClick = (featureName: string) => {
             break
     }
 }
+
+onMounted(() => {
+    console.log('home页面挂载')
+    user.tabIndex = 0
+})
 </script>
 
 <style scoped>
@@ -298,7 +306,7 @@ const handleFeatureClick = (featureName: string) => {
 }
 
 .category-item.active {
-    background-color: #4774b3;
+    background-color: #007bff87;
     color: #fff;
 }
 

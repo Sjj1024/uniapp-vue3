@@ -79,7 +79,7 @@ const orderTypes = [
 
 // 导航方法
 const goLogin = () => {
-    uni.navigateTo({ url: '/pages/login/login' })
+    uni.navigateTo({ url: '/pages/login/index' })
 }
 
 const goSettings = () => {

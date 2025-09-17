@@ -1,5 +1,6 @@
 <template>
-    <view class="card-library-container">
+    <Loading v-if="isLoading" />
+    <view v-else class="card-library-container">
         <!-- 分类标签栏 -->
         <view class="category-tabs">
             <view
@@ -55,11 +56,10 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
 import TabBar from '@/components/tabar.vue'
+import Loading from '@/components/loading.vue'
 
-// 路由实例
-const router = useRouter()
+const isLoading = ref(true)
 
 // 分类数据
 const categories = ref([
@@ -90,63 +90,72 @@ const allCards = ref([
     {
         id: 1,
         name: '烈焰战士',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
     {
         id: 2,
         name: '寒冰法师',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 3,
         name: '暗影刺客',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
     {
         id: 4,
         name: '光明圣骑士',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 5,
         name: '狼人守护者',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 6,
         name: '东方武者',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
     {
         id: 7,
         name: '风之行者',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 8,
         name: '机械工程师',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: false,
     },
     {
         id: 9,
         name: '绯红剑客',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 0,
         isRare: true,
     },
@@ -190,7 +199,8 @@ const allCards = ref([
     {
         id: 15,
         name: '绯红剑客',
-        imageUrl: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
+        imageUrl:
+            'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg',
         category: 3,
         isRare: true,
     },
@@ -204,22 +214,19 @@ const filteredCards = computed(() => {
 })
 
 // 显示加载更多
-const showLoadMore = ref(true)
+const showLoadMore = ref(false)
 
 // 查看卡牌详情
 const viewCardDetails = (card) => {
-    router.push({
-        path: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.jpeg',
-        query: { cardId: card.id },
-    })
+    console.log('查看卡牌详情', card)
 }
 
 // 页面加载时的操作
 onMounted(() => {
     // 模拟数据加载
     setTimeout(() => {
-        showLoadMore.value = false
-    }, 1500)
+        isLoading.value = false
+    }, 2000)
 })
 </script>
 

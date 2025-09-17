@@ -1,33 +1,12 @@
 import request from '@/utils/request'
 
 export default {
-    getUUID(data) {
-        console.log('getUUID')
+    loginWxapp(data) {
+        console.log('loginWxapp')
         return request({
-            url: '/user/wxapp',
+            url: '/card/mini_api/get_openid',
             method: 'get',
             data,
         })
-    },
-    changeStatus(data) {
-        return request({
-            url: '/message/isReads',
-            method: 'post',
-            data,
-        })
-    },
-    getMsgType(params) {
-        return request({
-            url: '/message/messageType',
-            method: 'get',
-            params,
-        })
-    },
-    deleteMsg(data) {
-        return request({
-            url: '/message/delete',
-            method: 'post',
-            data,
-        })
-    },
+    }
 }
