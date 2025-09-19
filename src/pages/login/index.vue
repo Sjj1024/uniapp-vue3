@@ -36,8 +36,8 @@ const handleLogin = (info: any) => {
         uni.login({
             provider: 'weixin',
             success: (res) => {
-                console.log('登录成功', res)
-                loginWxapp(res.code)
+                console.log('get user phone number', res)
+                // loginWxapp(res.code)
                 // user.tabIndex = 0
                 // uni.switchTab({ url: '/pages/home/index' })
             },
