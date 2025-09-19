@@ -1,4 +1,4 @@
-export const baseURL = '基础url地址'
+export const baseURL = "https://dev.hado-official.cn"
 
 const request = (options) => {
     // 判断是不是完整的地址，不是的话，拼接上baseUrl

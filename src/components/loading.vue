@@ -1,8 +1,8 @@
 <template>
     <div class="loading">
         <image
-            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/bird.gif"
-            class="loading-image"
+            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/load.gif"
+            class="gifImg"
         />
         <!-- <video
             src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/bird.mp4"
@@ -29,15 +29,20 @@ import { ref } from 'vue'
     top: 0;
     left: 0;
     z-index: 1000;
-    animation: loading 8s infinite;
+    // animation: loading 8s infinite;
+
+    .gifImg {
+        width: 200rpx;
+        height: 200rpx;
+    }
 }
 
-@keyframes loading {
-    0% {
-        transform: translateX(-200px);
-    }
-    100% {
-        transform: translateX(200px);
-    }
-}
+// @keyframes loading {
+//     0% {
+//         transform: translateX(-200px);
+//     }
+//     100% {
+//         transform: translateX(200px);
+//     }
+// }
 </style>

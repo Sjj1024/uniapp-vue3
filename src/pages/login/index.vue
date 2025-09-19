@@ -19,7 +19,7 @@ const user = useUserStore()
 
 const loginWxapp = async (code: string) => {
     const res: any = await homeApi.loginWxapp({ code })
-    console.log('登录成功', res)
+    console.log('loginWxapp', res)
     user.tabIndex = 0
     if (res.status == 200) {
         uni.switchTab({ url: '/pages/home/index' })
@@ -30,14 +30,16 @@ const loginWxapp = async (code: string) => {
 
 const handleLogin = (info: any) => {
     // uni.switchTab({ url: '/pages/home/index' })
+    console.log('handleLogin', info)
     // 如果拒绝就不登录
     if (info.detail.code) {
         uni.login({
             provider: 'weixin',
             success: (res) => {
                 console.log('登录成功', res)
-                user.tabIndex = 0
-                uni.switchTab({ url: '/pages/home/index' })
+                loginWxapp(res.code)
+                // user.tabIndex = 0
+                // uni.switchTab({ url: '/pages/home/index' })
             },
         })
     }

@@ -42,7 +42,6 @@
                 <image
                     class="img"
                     src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/camera.png"
-                    mode="widthFix"
                 ></image>
             </view>
         </view>
@@ -149,6 +148,7 @@ onMounted(() => {
 
         .img {
             width: 80%;
+            height: 100%;
         }
     }
 }
