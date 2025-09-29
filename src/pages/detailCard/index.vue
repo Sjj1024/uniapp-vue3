@@ -4,18 +4,18 @@
     <view v-else class="container" :style="{ paddingTop: contentTop }">
         <!-- 标题区 -->
         <view class="title-section">
-            <text class="main-title">YIFANSHANG</text>
+            <!-- <text class="main-title">YIFANSHANG</text> -->
         </view>
 
         <!-- 商品信息区 -->
         <view class="product-info">
             <view class="product-header">
                 <image
-                    src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/ka.jpg"
+                    src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/luzhi.png"
                     class="product-image"
                     mode="widthFix"
-                    alt="海洋的回音商品图"
-                ></image>
+                >
+                </image>
                 <view class="product-details">
                     <text class="product-name">海洋的回音 测试 - 副本</text>
                     <text class="product-price">¥31.98/抽</text>
@@ -25,13 +25,13 @@
 
             <!-- 换箱控制区 -->
             <view class="box-controls">
-                <button class="control-btn prev-btn">
-                    <text>上一个</text>
-                </button>
-                <button class="control-btn change-btn">换 箱</button>
-                <button class="control-btn next-btn">
-                    <text class="iconfont">下一个</text>
-                </button>
+                <view class="control-btn prev-btn">
+                    <!-- <text>上一个</text> -->
+                </view>
+                <view class="control-btn change-btn"></view>
+                <view class="control-btn next-btn">
+                    <!-- <text class="iconfont">下一个</text> -->
+                </view>
             </view>
 
             <!-- 剩余数量 -->
@@ -56,7 +56,7 @@
             </view>
             <view
                 class="tab-item"
-                :class="{ active: activeTab === 1 }"
+                :class="{ activeRight: activeTab === 1 }"
                 @click="activeTab = 1"
             >
                 <text>中奖记录</text>
@@ -107,9 +107,9 @@
                         ></image>
                         <text class="prize-name">{{ prize.name }}</text>
                         <text class="prize-rate">概率: {{ prize.rate }}</text>
-                        <text class="prize-remaining">{{
-                            prize.remaining
-                        }}</text>
+                        <text class="prize-remaining">
+                            {{ prize.remaining }}
+                        </text>
                         <text class="prize-price">¥{{ prize.price }}</text>
                     </view>
                 </view>
@@ -131,7 +131,7 @@
 
         <!-- 底部购买按钮 -->
         <view class="buy-section">
-            <button class="buy-btn">立即抢购</button>
+            <view class="buy-btn"></view>
         </view>
     </view>
 </template>
@@ -281,7 +281,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f0fce8;
+    /* background-color: #f0fce8; */
     padding-bottom: 70px;
     position: relative;
 }
@@ -289,7 +289,7 @@ onMounted(() => {
 /* 顶部导航栏 */
 .navbar {
     height: 44px;
-    background-color: #e1f5d0;
+    /* background-color: #e1f5d0; */
     display: flex;
     align-items: center;
     padding: 0 15px;
@@ -320,7 +320,12 @@ onMounted(() => {
 /* 标题区 */
 .title-section {
     padding: 15px;
+    height: 80rpx;
     text-align: center;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/yifansang.png');
+    background-size: 154rpx 80rpx;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main-title {
@@ -333,10 +338,14 @@ onMounted(() => {
 /* 商品信息区 */
 .product-info {
     margin: 0 15px;
-    background-color: #fff;
-    border-radius: 10px;
+    /* background-color: #fff; */
+    /* border-radius: 10px; */
     padding: 15px;
-    box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.1); */
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/detaiCardBg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .product-header {
@@ -381,7 +390,7 @@ onMounted(() => {
 /* 换箱控制区 */
 .box-controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 15px;
     gap: 10px;
@@ -389,28 +398,39 @@ onMounted(() => {
 
 .control-btn {
     padding: 2px 15px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     font-size: 14px;
     border: none;
     display: flex;
+    width: 111rpx;
+    height: 57rpx;
     align-items: center;
     justify-content: center;
 }
 
 .prev-btn,
 .next-btn {
-    background-color: #4774b3;
-    color: #fff;
-    width: 60px;
-    height: 30px;
+    /* background-color: #4774b3;
+    color: #fff; */
+    width: 111rpx;
+    height: 57rpx;
     padding: 0;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/preCard.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .change-btn {
-    background-color: #4774b3;
-    color: #fff;
-    height: 40px;
+    /* background-color: #4774b3;
+    color: #fff; */
+    width: 143rpx;
+    height: 77rpx;
     padding: 2px 30px;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/changeCard.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* 剩余数量和排队状态 */
@@ -422,12 +442,16 @@ onMounted(() => {
 }
 
 .queue-status {
-    background-color: #e8f5e9;
+    /* background-color: #e8f5e9; */
     padding: 10px;
     border-radius: 8px;
     text-align: center;
     font-size: 14px;
-    color: #2e7d32;
+    color: white;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/paidui.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* 标签切换区 */
@@ -437,7 +461,7 @@ onMounted(() => {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #e0e0e0;
+    /* border: 1px solid #e0e0e0; */
 }
 
 .tab-item {
@@ -449,7 +473,19 @@ onMounted(() => {
 }
 
 .tab-item.active {
-    background-color: #4774b3;
+    /* background-color: #4774b3; */
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/detaileft.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.tab-item.activeRight {
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/detailright.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
 }
 
@@ -464,11 +500,21 @@ onMounted(() => {
 
 .category-title {
     display: inline-block;
-    background-color: #ffd600;
-    color: #333;
+    /* background-color: #ffd600; */
+    /* color: #333; */
     font-weight: bold;
     padding: 3px 10px;
-    border-radius: 4px;
+    width: 102rpx;
+    height: 75rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 4px; */
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/tipsBg.png');
+    color: white;
+    background-size: 102rpx 75rpx;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-bottom: 10px;
     font-size: 14px;
 }
@@ -570,18 +616,16 @@ onMounted(() => {
     left: 0;
     right: 0;
     padding: 10px 10px;
-    background-color: #f0fce8;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .buy-btn {
-    width: 80%;
-    padding: 6px 0;
-    background-color: #4774b3;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 30px;
-    border: none;
+    width: 371rpx;
+    height: 85rpx;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/payNow.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
 }
 
 /* 图标字体 */

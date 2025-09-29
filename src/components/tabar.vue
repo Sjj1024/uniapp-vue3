@@ -1,79 +1,20 @@
 <template>
-    <u-tabbar
-        :border="false"
-        :value="user.tabIndex"
-        @change="change"
-        :fixed="true"
-        :placeholder="true"
-        :safeAreaInsetBottom="true"
-        activeColor="black"
-        inactiveColor="#BFBFBF"
-    >
-        <u-tabbar-item text="首页">
-            <template #active-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://carrier-mljr-test.oss-cn-beijing.aliyuncs.com/hado_static/statics/homeSel.png"
-                ></image>
-            </template>
-            <template #inactive-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://carrier-mljr-test.oss-cn-beijing.aliyuncs.com/hado_static/statics/homeUn.png"
-                ></image>
-            </template>
-        </u-tabbar-item>
-        <u-tabbar-item text="盒柜">
-            <template #active-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://hadoappusage.oss-cn-shanghai.aliyuncs.com/static/mini_image/15matchUp.png"
-                ></image>
-            </template>
-            <template #inactive-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://hadoappusage.oss-cn-shanghai.aliyuncs.com/static/mini_image/15match.png"
-                ></image>
-            </template>
-        </u-tabbar-item>
-        <view class="tabars" @click="tabMiddle">
-            <view class="item">
-                <image
-                    class="img"
-                    src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/camera.png"
-                ></image>
-            </view>
+    <div class="tabbarBox">
+        <view
+            class="tabbarItem"
+            v-for="(item, index) in tabbarList"
+            :key="index"
+            @click="change(index)"
+            :class="{ middleItem: index == 2 }"
+        >
+            <image
+                :src="user.tabIndex == index ? item.activeSrc : item.src"
+                class="tabbarImg"
+                :class="{ middleImg: index == 2 }"
+            ></image>
+            <text v-if="index != 2" class="tabbarText">{{ item.text }}</text>
         </view>
-        <u-tabbar-item text="图鉴">
-            <template #active-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://hadoappusage.oss-cn-shanghai.aliyuncs.com/static/mini_image/15clubUp.png"
-                ></image>
-            </template>
-            <template #inactive-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://hadoappusage.oss-cn-shanghai.aliyuncs.com/static/mini_image/15club.png"
-                ></image>
-            </template>
-        </u-tabbar-item>
-        <u-tabbar-item text="我的">
-            <template #active-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://carrier-mljr-test.oss-cn-beijing.aliyuncs.com/hado_static/statics/mySel.png"
-                ></image>
-            </template>
-            <template #inactive-icon>
-                <image
-                    class="u-page__item__slot-icon"
-                    src="https://carrier-mljr-test.oss-cn-beijing.aliyuncs.com/hado_static/statics/myUn.png"
-                ></image>
-            </template>
-        </u-tabbar-item>
-    </u-tabbar>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -81,6 +22,33 @@ import { onMounted } from 'vue'
 import useUserStore from '@/store/user'
 
 const user = useUserStore()
+
+const tabbarList = [
+    {
+        src: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home1.png',
+        activeSrc: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home2.png',
+        text: '首页',
+    },
+    {
+        src: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/hegui1.png',
+        activeSrc: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/hegui2.png',
+        text: '盒柜',
+    },
+    {
+        src: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/scanner.png',
+        text: '',
+    },
+    {
+        src: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/tujian1.png',
+        activeSrc: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/tujian2.png',
+        text: '图鉴',
+    },
+    {
+        src: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/my1.png',
+        activeSrc: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/my2.png',
+        text: '我的',
+    },
+]
 
 // 获取是否有俱乐部信息
 const getClubInfo = async () => {
@@ -98,11 +66,11 @@ const change = function (index) {
         uni.switchTab({
             url: '/pages/car/index',
         })
-    } else if (index == 2) {
+    } else if (index == 3) {
         uni.switchTab({
             url: '/pages/imgcard/index',
         })
-    } else if (index == 3) {
+    } else if (index == 4) {
         uni.switchTab({
             url: '/pages/my/index',
         })
@@ -124,6 +92,49 @@ onMounted(() => {
 .u-page__item__slot-icon {
     width: 44rpx;
     height: 44rpx;
+}
+
+.tabbarBox {
+    // background-color: red;
+    height: 240rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: -2rpx;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/barbg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .tabbarItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60rpx;
+
+        .tabbarImg {
+            width: 80rpx;
+            height: 80rpx;
+        }
+        .tabbarText {
+            font-size: 20rpx;
+            color: #fff;
+        }
+        .middleImg {
+            width: 160rpx;
+            height: 160rpx;
+        }
+    }
+
+    .middleItem {
+        margin-bottom: 60rpx;
+    }
 }
 
 .tabars {

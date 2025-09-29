@@ -4,7 +4,7 @@
         <view class="user-info">
             <view class="avatar-area">
                 <view class="login-btn" @click="goLogin">
-                    <text>登录/注册</text>
+                    <!-- <text>登录/注册</text> -->
                 </view>
             </view>
         </view>
@@ -158,10 +158,16 @@ const goAppPage = (type) => {
 
 .login-btn {
     padding: 8px 15px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 20px; */
     font-size: 14px;
     color: #666;
+    width: 180rpx;
+    height: 50rpx;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/loginBtn.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .settings-btn {

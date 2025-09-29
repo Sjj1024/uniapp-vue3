@@ -3,7 +3,7 @@
         <!-- 温馨提示横幅 -->
         <view class="banner">
             <image
-                src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/homebar2.jpg"
+                src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/yuji.png"
                 class="banner-image"
                 mode="widthFix"
                 alt="卡通形象提示图"
@@ -190,10 +190,10 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg');
+    /* background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/home.jpg');
     background-size: 100% 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 /* 顶部导航栏 */
@@ -246,7 +246,6 @@ onMounted(() => {
 
 .banner-image {
     width: 100%;
-    height: 100%;
     object-fit: contain;
     z-index: 1;
 }
@@ -256,9 +255,12 @@ onMounted(() => {
     display: flex;
     justify-content: space-around;
     padding: 15px 0;
-    background-color: #ffffff88;
     margin: 10px;
     border-radius: 10px;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/menuBg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .feature-item {
@@ -280,11 +282,14 @@ onMounted(() => {
 
 /* 分类导航 */
 .category-nav {
-    background-color: #ffffff88;
+    background-color: #f1f2f8;
     padding: 10px 0;
     margin: 0 10px;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .category-scroll {
@@ -294,7 +299,7 @@ onMounted(() => {
 
 .category-item {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 8px 16px;
     margin-right: 10px;
     font-size: 14px;
     color: #666;
@@ -302,8 +307,12 @@ onMounted(() => {
 }
 
 .category-item.active {
-    background-color: #007bff87;
+    /* background-color: #007bff87; */
     color: #fff;
+    background-image: url('https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/activeMenu.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* 商品展示区 */
@@ -312,7 +321,7 @@ onMounted(() => {
     flex-wrap: wrap;
     padding: 10px 0;
     gap: 10px;
-    background-color: #ffffff66;
+    background-color: #f1f2f8;
     margin: 0 10px 60px 10px;
     border-radius: 0 0 10px 10px;
 }
