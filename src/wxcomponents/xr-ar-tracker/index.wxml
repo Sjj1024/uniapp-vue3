@@ -1,0 +1,21 @@
+<xr-scene ar-system="modes:OSD" bind:ready="handleReady">
+    <xr-assets bind:loaded="handleAssetsLoaded">
+        <xr-asset-material
+            asset-id="mat"
+            effect="simple"
+            uniforms="u_baseColorFactor: 0.8 0.6 0.4 0.7"
+            states="alphaMode:BLEND"
+        />
+    </xr-assets>
+
+    <xr-node>
+        <xr-ar-tracker
+            mode="OSD"
+            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/cat.jpg"
+        >
+            <xr-mesh geometry="plane" material="mat" rotation="-90 0 0" />
+        </xr-ar-tracker>
+    </xr-node>
+
+    <xr-camera clear-color="0.4 0.8 0.6 1" background="ar" is-ar-camera />
+</xr-scene>

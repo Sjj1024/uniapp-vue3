@@ -48,8 +48,11 @@
             "path": "pages/xrdemo/index",
             "style": {
                 "navigationBarTitleText": "XR Demo",
+                "navigationStyle": "custom",
                 "usingComponents": {
-                    "xr-gltf": "../../wxcomponents/xr-gltf/index"
+                    "xr-gltf": "../../wxcomponents/xr-gltf/index",
+                    "xr-start": "../../wxcomponents/xr-start/index",
+                    "xr-ar-tracker": "../../wxcomponents/xr-ar-tracker/index"
                 }
             }
         }

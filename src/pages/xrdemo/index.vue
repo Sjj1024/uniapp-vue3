@@ -1,30 +1,42 @@
 <template>
     <view class="content">
-        <xr-gltf
+        <xr-ar-tracker
             :width="renderWidth"
             :height="renderHeight"
-            :style="'width:' + width + 'px;height:' + height + 'px;'"
+            :style="
+                'width:' + screenWidth + 'px;height:' + screenHeight + 'px;'
+            "
         >
-        </xr-gltf>
+        </xr-ar-tracker>
     </view>
 </template>
 
 <script>
+import {
+    screenWidth,
+    screenHeight,
+    renderWidth,
+    renderHeight,
+    windowWidth,
+    windowHeight,
+} from '@/utils/comm'
+
 export default {
     data() {
         return {
-            width: 300,
-            height: 300,
-            renderWidth: 300,
-            renderHeight: 300,
+            width: windowWidth,
+            height: windowHeight,
+            renderWidth: renderWidth,
+            renderHeight: renderHeight,
+            screenWidth: screenWidth,
+            screenHeight: screenHeight,
         }
     },
     onLoad() {
-        this.width = uni.getWindowInfo().windowWidth
-        this.height = uni.getWindowInfo().windowHeight
-        const dpi = uni.getWindowInfo().pixelRatio
-        this.renderWidth = this.width * dpi
-        this.renderHeight = this.height * dpi
+        console.log('windowWidth', windowWidth)
+        console.log('windowHeight', windowHeight)
+        console.log('renderWidth', renderWidth)
+        console.log('renderHeight', renderHeight)
     },
     methods: {},
 }

@@ -1,1 +1,5 @@
-Component({})
+Component({
+    properties: {},
+    data: {},
+    methods: {},
+})
