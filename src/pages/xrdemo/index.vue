@@ -1,26 +1,40 @@
 <template>
-    <xr-start
-        disable-scroll
-        id="main-frame"
-        :width="renderWidth"
-        :height="renderHeight"
-        :style="{ width: width + 'px', height: height + 'px' }"
-    />
+    <view class="content">
+        <xr-gltf
+            :width="renderWidth"
+            :height="renderHeight"
+            :style="'width:' + width + 'px;height:' + height + 'px;'"
+        >
+        </xr-gltf>
+    </view>
 </template>
 
-<script setup lang="ts">
-import { onMounted, ref } from 'vue'
-const renderWidth = ref(0)
-const renderHeight = ref(0)
-const width = ref(0)
-const height = ref(0)
-
-onMounted(() => {
-    renderWidth.value = uni.getSystemInfoSync().windowWidth
-    renderHeight.value = uni.getSystemInfoSync().windowHeight
-    width.value = uni.getSystemInfoSync().windowWidth
-    height.value = uni.getSystemInfoSync().windowHeight
-})
+<script>
+export default {
+    data() {
+        return {
+            width: 300,
+            height: 300,
+            renderWidth: 300,
+            renderHeight: 300,
+        }
+    },
+    onLoad() {
+        this.width = uni.getWindowInfo().windowWidth
+        this.height = uni.getWindowInfo().windowHeight
+        const dpi = uni.getWindowInfo().pixelRatio
+        this.renderWidth = this.width * dpi
+        this.renderHeight = this.height * dpi
+    },
+    methods: {},
+}
 </script>
 
-<style scoped lang="scss"></style>
+<style>
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+</style>

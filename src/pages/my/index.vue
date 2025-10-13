@@ -87,7 +87,7 @@ const goSettings = () => {
 }
 
 const goOrderList = (type) => {
-    uni.navigateTo({ url: `/pages/orders/list?type=${type}` })
+    uni.navigateTo({ url: `/pages/xrdemo/index` })
 }
 
 const goAppPage = (type) => {

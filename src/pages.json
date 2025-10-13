@@ -4,7 +4,6 @@
             "path": "pages/home/index",
             "style": {
                 "navigationBarTitleText": "首页"
-                // "navigationStyle": "custom"
             }
         },
         {
@@ -43,6 +42,15 @@
             "style": {
                 "navigationBarTitleText": "登陆",
                 "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/xrdemo/index",
+            "style": {
+                "navigationBarTitleText": "XR Demo",
+                "usingComponents": {
+                    "xr-gltf": "../../wxcomponents/xr-gltf/index"
+                }
             }
         }
     ],
