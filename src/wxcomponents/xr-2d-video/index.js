@@ -25,12 +25,16 @@ Component({
         handleAssetsLoaded: function ({ detail }) {
             this.setData({ loaded: true })
         },
-        handleTrackerSwitch: function ({ detail }) {
+        handleTrackerSwitch: function (event) {
+            console.log('handleTrackerSwitch', event)
+            const detail = event.detail
             const active = detail.value
             const video = this.scene.assets.getAsset('video-texture', 'hikari')
             active ? video.play() : video.stop()
         },
-        handleTracker2Switch: function ({ detail }) {
+        handleTracker2Switch: function (event) {
+            console.log('handleTracker2Switch', event)
+            const detail = event.detail
             const active = detail.value
             const video = this.scene.assets.getAsset('video-texture', 'fire')
             active ? video.play() : video.stop()
