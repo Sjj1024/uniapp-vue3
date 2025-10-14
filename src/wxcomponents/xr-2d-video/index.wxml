@@ -4,7 +4,7 @@
             type="video-texture"
             asset-id="hikari"
             options="loop:true"
-            src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/xr-frame-team/2dmarker/hikari-v.mp4"
+            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/bird.mp4"
         />
         <xr-asset-material
             asset-id="mat"
@@ -17,7 +17,7 @@
         <xr-ar-tracker
             mode="Marker"
             bind:ar-tracker-switch="handleTrackerSwitch"
-            src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/xr-frame-team/2dmarker/hikari.jpg"
+            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/cat.jpg"
         >
             <xr-mesh node-id="mesh-plane" geometry="plane" material="mat" />
         </xr-ar-tracker>
