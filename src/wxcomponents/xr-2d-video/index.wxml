@@ -1,15 +1,28 @@
 <xr-scene ar-system="modes:Marker" bind:ready="handleReady">
     <xr-assets bind:loaded="handleAssetsLoaded">
+        <!-- 第一个视频 -->
         <xr-asset-load
             type="video-texture"
             asset-id="hikari"
             options="loop:true"
-            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/bird.mp4"
+            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/test/jian.mp4"
         />
         <xr-asset-material
             asset-id="mat"
             effect="simple"
             uniforms="u_baseColorMap: video-hikari"
+        />
+        <!-- 第二个视频 -->
+        <xr-asset-load
+            type="video-texture"
+            asset-id="fire"
+            options="loop:true"
+            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/test/fire.mp4"
+        />
+        <xr-asset-material
+            asset-id="mat2"
+            effect="simple"
+            uniforms="u_baseColorMap: video-fire"
         />
     </xr-assets>
 
@@ -20,6 +33,13 @@
             src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/cat.jpg"
         >
             <xr-mesh node-id="mesh-plane" geometry="plane" material="mat" />
+        </xr-ar-tracker>
+        <xr-ar-tracker
+            mode="Marker"
+            bind:ar-tracker-switch="handleTracker2Switch"
+            src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/test/yuji.jpg"
+        >
+            <xr-mesh node-id="mesh-plane2" geometry="plane" material="mat2" />
         </xr-ar-tracker>
     </xr-node>
 

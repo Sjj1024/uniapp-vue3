@@ -30,6 +30,11 @@ Component({
             const video = this.scene.assets.getAsset('video-texture', 'hikari')
             active ? video.play() : video.stop()
         },
+        handleTracker2Switch: function ({ detail }) {
+            const active = detail.value
+            const video = this.scene.assets.getAsset('video-texture', 'fire')
+            active ? video.play() : video.stop()
+        },
         handleARReady: function ({ detail }) {
             console.log('arReady')
             this.setData({
