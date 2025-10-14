@@ -87,7 +87,14 @@ const goSettings = () => {
 }
 
 const goOrderList = (type) => {
-    uni.navigateTo({ url: `/pages/xrdemo/index` })
+    switch (type) {
+        case 'open-box':
+            uni.navigateTo({ url: '/pages/xrdemo/index' })
+            break
+        case 'unbox':
+            uni.navigateTo({ url: '/pages/xrvideo/index' })
+            break
+    }
 }
 
 const goAppPage = (type) => {
