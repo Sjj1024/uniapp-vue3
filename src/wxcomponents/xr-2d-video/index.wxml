@@ -29,6 +29,7 @@
     <xr-node wx:if="{{ loaded }}">
         <xr-ar-tracker
             mode="Marker"
+            data-id="tracker1"
             bind:ar-tracker-switch="handleTrackerSwitch"
             src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/cat.jpg"
         >
@@ -36,7 +37,8 @@
         </xr-ar-tracker>
         <xr-ar-tracker
             mode="Marker"
-            bind:ar-tracker-switch="handleTracker2Switch"
+            data-id="tracker2"
+            bind:ar-tracker-switch="handleTrackerSwitch"
             src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/test/yuji.jpg"
         >
             <xr-mesh node-id="mesh-plane2" geometry="plane" material="mat2" />
