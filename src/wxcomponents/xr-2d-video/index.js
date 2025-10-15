@@ -8,6 +8,18 @@ Component({
     data: {
         loaded: false,
         arReady: false,
+        imgVideoMap: [
+            {
+                img: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/cat.jpg',
+                video: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/test/jian.mp4',
+                name: 'jian',
+            },
+            {
+                img: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/test/yuji.jpg',
+                video: 'https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/test/fire.mp4',
+                name: 'fire',
+            },
+        ],
     },
     lifetimes: {
         async attached() {
