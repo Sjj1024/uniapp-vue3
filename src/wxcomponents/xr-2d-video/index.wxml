@@ -33,7 +33,13 @@
             bind:ar-tracker-switch="handleTrackerSwitch"
             src="https://devusage.oss-cn-shanghai.aliyuncs.com/songjiangjiang/static/cat.jpg"
         >
-            <xr-mesh node-id="mesh-plane" geometry="plane" material="mat" />
+            <!-- 1.6 是视频的宽高比，因为视频是16:9，所以宽高比是1.6 -->
+            <xr-mesh
+                node-id="mesh-plane"
+                geometry="plane"
+                material="mat"
+                scale="1 1 1.6"
+            />
         </xr-ar-tracker>
         <xr-ar-tracker
             mode="Marker"
